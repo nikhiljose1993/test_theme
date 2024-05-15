@@ -10,20 +10,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 240, 231, 255),
+      backgroundColor: theme.colorScheme.background,
       body: Center(
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.deepPurple[300],
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.25),
-                spreadRadius: 2,
-                blurRadius: 4,
-                offset: const Offset(0, 0),
-              ),
-            ],
+            color: theme.colorScheme.primary,
             borderRadius: BorderRadius.circular(14),
           ),
           width: 200,
